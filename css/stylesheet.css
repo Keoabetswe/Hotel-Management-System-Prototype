@@ -146,6 +146,36 @@ ol {
 }
 
 /* ------------------- Forms ------------------- */
+.input-group {
+	margin: 10px 0px 10px 0px;
+  }
+  
+  .input-login { /* for login form */
+	margin: 10px 0px 10px 0px;
+  }
+
+  .input-login input { /* for login form */
+	height: 30px;
+	width: 200px;
+	padding: 5px 10px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: 1px solid gray;
+  }
+
+  .input-register { /* for register form */
+	margin: 10px 0px 10px 0px;
+  }
+
+  .input-register input { /* for register form */
+	height: 30px;
+	width: 200px;
+	padding: 5px 10px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: 1px solid gray;
+  }
+  
 input, select, textarea  {
 	border: solid 1px #D9BF8F;
 	Margin-top:1px;
@@ -253,3 +283,8 @@ input, select, textarea  {
 	to{opacity:1}	
 }
 
+/* table */
+.table th
+{
+	background:grey;
+}
