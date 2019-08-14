@@ -20,6 +20,19 @@
 	
 	<!-- social media icons -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	 	<!-- Form code -->
+		 <link rel="stylesheet" href="js/jquery-ui.css" />
+		 <script src="js/jquery-1.8.3.js"></script>
+		 <script src="js/jquery-ui.js"></script>
+		 <script>
+		   $(function() {
+			 $.datepicker.setDefaults({dateFormat: 'dd-mm-yy'});
+			 $( "input.date" ).datepicker();
+		   });
+		 </script>
+		 
+		 <script language="javascript" src="js/jquery.validation.js"></script>
 </head>
 
 <body>
@@ -60,14 +73,52 @@
 		<!-- Body header -->
 		<center><h1>Register</h1></center>
 
-		
 		<!-- Body content --> 
 		<div id="maincontent" >
-			<!-- break -->
-			</br></br></br></br></br></br>
-			</br></br></br></br></br></br>
-			</br></br></br></br></br></br>
+			<form action="thank-you.html" method="post" id="myform"> 
+				<center><div class="form-group required-field" style="width: 250px;">
+					<input type="input" class="form-control" id="name" placeholder="Name">
+				</div>
+
+				<div class="form-group required-field" style="width: 250px;">
+					<input type="input" class="form-control" id="surname" placeholder="Surname">
+				</div>
+
+				<div class="form-group required-field" style="width: 250px;">
+					<input type="input" class="form-control" id="id" placeholder="ID Number">
+				</div>
+				
+				<div class="form-group required-field" style="width: 250px;">
+					<input type="input" class="form-control date" id="dob" placeholder="Date of birth"> 
+				</div>	
+
+				<div class="form-group required-field" style="width: 250px;">
+					<input type="input" class="form-control" id="email" placeholder="Email">
+				</div>
+
+				<div class="form-group required-field" style="width: 250px;">
+					<input type="number" class="form-control" id="name" placeholder="Phone Number">
+				</div>
+
+				<div class="form-group required-field" style="width: 250px;">	
+					<input type="password" class="form-control" id="password" placeholder="Password">
+				</div>
+				
+
+				<div class="form-group required-field" style="width: 250px;">	
+					<input type="password" class="form-control" id="confirm_password" placeholder="Confirm Password">
+				</div>
+				
+  				<div class="form-group">
+					<input name="Submit" type="submit" value="Submit" class="btn btn-primary submit" />
+				</div>
+				
+				<a href="login.html">Already have an account? Login here</a></center>		
+			</form>
 		</div>
+
+		<!-- break -->
+		<br/>
 
 		<!-- footer -->	
 		<div id="footer">
