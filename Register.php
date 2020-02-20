@@ -1,65 +1,148 @@
+﻿<?php 
+	$db_host="localhost";	
+	$db_username="root";	
+	$db_password="";	
+	$db_name="grand_hotel";
+	
+	$db_connect = mysqli_connect($db_host, $db_username, $db_password, $db_name);
+?> 
+
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Grand Hotel</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
- 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
- 	<link rel="stylesheet" type="text/css" href="./includes/style.css">
- 	<script type="text/javascript" src="./js/main.js"></script>
- </head>
+    <title>Register</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/stylesheet.css" rel="stylesheet">
+    
+    <!-- Bootstrap core JavaScript -->
+    <script src="js/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+	
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/docs.min.js"></script>
+	
+	<!-- social media icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	 	<!-- Form code -->
+		 <link rel="stylesheet" href="js/jquery-ui.css" />
+		 <script src="js/jquery-1.8.3.js"></script>
+		 <script src="js/jquery-ui.js"></script>
+		 <script>
+		   $(function() {
+			 $.datepicker.setDefaults({dateFormat: 'dd-mm-yy'});
+			 $( "input.date" ).datepicker();
+		   });
+		 </script>
+		 
+		 <script language="javascript" src="js/jquery.validation.js"></script>
+</head>
+
 <body>
-<div class="overlay"><div class="loader"></div></div>
-	<!-- Navbar -->
-	<?php include_once("./templates/header.php"); ?>
-	<br/><br/>
+ 	<!-- opens header, body and footer -->
 	<div class="container">
-		<div class="card mx-auto" style="width: 30rem;">
-	        <div class="card-header">Register</div>
-		      <div class="card-body">
-		        <form id="register_form" onsubmit="return false" autocomplete="off">
-		          <div class="form-group">
-		            <label for="username">Full Name</label>
-		            <input type="text" name="username" class="form-control" id="username" placeholder="Enter Username">
-		            <small id="u_error" class="form-text text-muted"></small>
-		          </div>
-		          <div class="form-group">
-		            <label for="email">Email address</label>
-		            <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
-		            <small id="e_error" class="form-text text-muted">We'll never share your email with anyone else.</small>
-		          </div>
-		          <div class="form-group">
-		            <label for="password1">Password</label>
-		            <input type="password" name="password1" class="form-control"  id="password1" placeholder="Password">
-		            <small id="p1_error" class="form-text text-muted"></small>
-		          </div>
-		          <div class="form-group">
-		            <label for="password2">Re-enter Password</label>
-		            <input type="password" name="password2" class="form-control"  id="password2" placeholder="Password">
-		            <small id="p2_error" class="form-text text-muted"></small>
-		          </div>
-		          <div class="form-group">
-		            <label for="usertype">Usertype</label>
-		            <select name="usertype" class="form-control" id="usertype">
-		              <option value="">Choose User Type</option>
-		              <option value="Admin">Admin</option>
-		              <option value="Other">Other</option>
-		            </select>
-		            <small id="t_error" class="form-text text-muted"></small>
-		          </div>
-		          <button type="submit" name="user_register" class="btn btn-primary"><span class="fa fa-user"></span>&nbsp;Register</button>
-		          <span><a href="index.php">Login</a></span>
-		        </form>
-		      </div>
-	      <div class="card-footer text-muted">
-	        
-	      </div>
-	    </div>
+ 		
+		<!-- Header -->
+		<div id="top" class="row">
+			
+			<!-- Logo -->
+			<div id="logo" class="pull-left">
+			<h1>Grand Hotel</h1>
+			</div>
+		</div>
+
+		<!-- Static navbar -->
+		<nav class="row navbar">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="reservations.php">Reservations</a></li>
+						<li><a href="rates.html">Rates</a></li>
+						<li><a href="enquiries.php">Enquiries</a></li>
+						<li><a href="contact-us.html">Contact Us</a></li>
+					</ul>
+				</div>
+		</nav>
+		
+		<!-- Body header -->
+		<center><h1>Register</h1></center>
+
+		<!-- Body content --> 
+		<div id="maincontent" >
+			<form action="user_process.php" method="post" id="myform"> 
+				<center><div class="form-group required-field" style="width: 250px;">
+					<input type="text" class="form-control" id="name" placeholder="Name" name="name">
+				</div>
+
+				<div class="form-group required-field" style="width: 250px;">
+					<input type="text" class="form-control" id="surname" placeholder="Surname" name="surname">
+				</div>
+
+				<div class="form-group required-field" style="width: 250px;">
+					<input type="number" class="form-control" id="id" placeholder="ID Number" name="id">
+				</div>
+				
+				<div class="form-group required-field" style="width: 250px;">
+					<input type="date" class="form-control" id="dob" placeholder="Date of birth" name="dob"> 
+				</div>	
+
+				<div class="form-group required-field" style="width: 250px;">
+					<input type="text" class="form-control" id="email" placeholder="Email" name="email">
+				</div>
+
+				<div class="form-group required-field" style="width: 250px;">
+					<input type="number" class="form-control" id="phone" placeholder="Phone Number" name="phone">
+				</div>
+
+				<div class="form-group required-field" style="width: 250px;">	
+					<input type="password" class="form-control" id="password" placeholder="Password" name="password">
+				</div>
+
+				<div class="form-group required-field" style="width: 250px;">	
+					<input type="password" class="form-control" id="confirm_password" placeholder="Confirm Password">
+				</div>
+				
+  				<div class="form-group">
+					<input name="register-form" type="submit" class="btn btn-primary submit" />
+				</div>
+				
+				<a href="login.html">Already have an account? Login here</a></center>		
+			</form>
+		</div>
+
+		<!-- break -->
+		<br/>
+
+		<!-- footer -->	
+		<div id="footer">
+      		<small>
+				&copy; Grand Hotel
+				<a href="http:twitter/electronix.com" class="fa fa-facebook" title="Facebook"></a> 
+				<a href="http:twitter/electronix.com" class="fa fa-twitter" title="Twitter"></a> 
+				<a href="http:twitter/electronix.com" class="fa fa-instagram" title="Instagram"></a>  
+      		</small>
+		</div>
+		
+	<!-- closes header, body and footer -->
 	</div>
 
+	<!-- JavaScript slideshow -->
+	<script type="text/javascript" src="js/slideshow.js"></script>
 </body>
 </html>

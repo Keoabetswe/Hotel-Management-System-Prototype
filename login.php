@@ -1,8 +1,4 @@
-﻿<?php 
-	include("user_process.php");
-?> 
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Login</title>
@@ -69,7 +65,7 @@
 						<li><a href="about.html">About</a></li>
 						<li><a href="reservations.php">Reservations</a></li>
 						<li><a href="rates.html">Rates</a></li>
-						<li><a href="enquiries.html">Enquiries</a></li>
+						<li><a href="enquiries.php">Enquiries</a></li>
 						<li><a href="contact-us.html">Contact Us</a></li>
 					</ul>
 				</div>
@@ -83,11 +79,11 @@
 		<div id="maincontent" >
 			<form action="user_process.php" method="post" id="myform"> 
 				<center><div class="form-group required-field" style="width: 250px;">
-					<input type="input" class="form-control" id="email" placeholder="Email">
+					<input type="input" class="form-control" id="email" name="email" placeholder="Email">
 				</div>
 
 				<div class="form-group required-field" style="width: 250px;">	
-					<input type="password" class="form-control" id="password" placeholder="Password">
+					<input type="password" class="form-control" id="password" name="password" placeholder="Password">
 				</div>
 				
   				<div class="form-group">

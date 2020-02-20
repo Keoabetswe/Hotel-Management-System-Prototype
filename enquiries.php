@@ -1,4 +1,13 @@
-﻿<!DOCTYPE html>
+﻿<?php 
+	$db_host="localhost";	
+	$db_username="root";	
+	$db_password="";	
+	$db_name="grand_hotel";
+	
+	$db_connect = mysqli_connect($db_host, $db_username, $db_password, $db_name);
+?> 
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Enquiries</title>
@@ -77,7 +86,7 @@
 						<li><a href="about.html">About</a></li>
 						<li><a href="reservations.php">Reservations</a></li>
 						<li><a href="rates.html">Rates</a></li>
-						<li><a href="enquiries.html">Enquiries</a></li>
+						<li><a href="enquiries.php">Enquiries</a></li>
 						<li><a href="contact-us.html">Contact Us</a></li>
 					</ul>
 				</div>
@@ -89,30 +98,30 @@
 		
 		<!-- Body content --> 
 		<div id="maincontent" >
-			<form action="user_process.php" method="post" id="myform"> 
+			<form action="user_process.php" method="post"> 
 			    <div class="form-group required-field">
 					<label for="name required-field">Name *</label>
-					<input type="input" class="form-control" id="name" placeholder="Name">
+					<input type="text" class="form-control" id="Name" name="name" placeholder="Name">
 				</div>
 				<div class="form-group required-field">
 					<label for="surname">Surname *</label>
-					<input type="input" class="form-control" id="surname" placeholder="Surname">
+					<input type="text" class="form-control" id="Surname" name="surname" placeholder="Surname">
 				</div>
 				<div class="form-group required-field">
 					<label for="email">Email *</label>
-					<input type="input" class="form-control" id="email" placeholder="Email">
+					<input type="text" class="form-control" id="Email" name="email" placeholder="Email">
 				</div>
 				<div class="form-group">
 					<label for="phone">Phone</label>
-					<input type="input" class="form-control" id="phone" placeholder="Phone">
+					<input type="number" pattern="[0-9]{10}" title="10 Digits only" class="form-control" id="Phone" name="phone" placeholder="Phone">
 				</div>
 				
 				<div class="form-group required-field">
 					<label for="message">Message *</label>
-					<textarea class="form-control" rows="5" placeholder="Message" id="message"></textarea>
+					<textarea class="form-control" rows="5" type="text" name="message" placeholder="Message" id="Message"></textarea>
 				</div>
   				<div class="form-group">
-					<input name="enquiry-form" type="submit" value="Submit" class="btn btn-primary submit" />
+					<input name="enquiry-form" type="submit" class="btn btn-primary submit" />
 				</div>			
 			</form>
 		</div>
